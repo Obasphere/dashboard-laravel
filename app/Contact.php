@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace CittaDashboard;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -169,11 +169,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        CittaDashboard\Providers\AppServiceProvider::class,
+        CittaDashboard\Providers\AuthServiceProvider::class,
+        // CittaDashboard\Providers\BroadcastServiceProvider::class,
+        CittaDashboard\Providers\EventServiceProvider::class,
+        CittaDashboard\Providers\RouteServiceProvider::class,
 
     ],
 

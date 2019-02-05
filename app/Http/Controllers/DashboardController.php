@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace CittaDashboard\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Contact;
-use App\Item;
-use App\Payment;
-use App\Invoice;
-use App\Opportunity;
-use D;
+use CittaDashboard\Contact;
+use CittaDashboard\Item;
+use CittaDashboard\Payment;
+use CittaDashboard\Invoice;
+use CittaDashboard\Opportunity;
+use DB;
 
 class DashboardController extends Controller
 {
@@ -26,7 +26,7 @@ class DashboardController extends Controller
     			'value' => Item::count()
     		],
     		[
-    			'title' => 'Un Paid Invoices',
+    			'title' => 'UnPaid Invoices',
     			'type' => 'value',
     			'value' => Invoice::where('status', 'sent')->count()
     		],
@@ -36,13 +36,13 @@ class DashboardController extends Controller
     			'value' => Opportunity::where('status', 'new')->count()
     		],
     		[
-    			'title' => 'Opportunities Lost',
+    			'title' => 'Lost Opportunities',
     			'type' => 'chart',
     			'color' => '#6be6c1',
     			'value' => $this->getChart(Opportunity::where('status', 'lost'), 'created_at')
     		],
     		[
-    			'title' => 'Opportunities Won',
+    			'title' => 'Won Opportunities',
     			'type' => 'chart',
     			'color' => '#96dee8',
     			'value' => $this->getChart(Opportunity::where('status', 'won'), 'created_at')

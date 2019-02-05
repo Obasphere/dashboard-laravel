@@ -20,19 +20,19 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         $faker = Factory::create();
 
-    	foreach(range(1, 100) as $i) {
+    	foreach(range(1, 500) as $i) {
     		Contact::create([
     			'name' => $faker->name
     		]);
     	}
 
-    	foreach(range(1, 50) as $i) {
+    	foreach(range(1, 250) as $i) {
     		Item::create([
-    			'name' => 'Product Name '.$i
+    			'name' => 'Product '.$i
     		]);
     	}
 
-    	foreach(range(1, 100) as $i) {
+    	foreach(range(1, 500) as $i) {
     		Invoice::create([
     			'issue_date' => '2019-02-'.mt_rand(1, 28),
     			'due_date' => '2019-02-'.mt_rand(1, 28),
@@ -40,14 +40,14 @@ class DatabaseSeeder extends Seeder
     		]);
     	}
 
-    	foreach(range(1, 100) as $i) {
+    	foreach(range(1, 500) as $i) {
     		Payment::create([
     			'payment_date' => '2019-02-'.mt_rand(1, 28),
     			'status' => $faker->randomElement(['undeposited', 'deposited'])
     		]);
     	}
 
-    	foreach(range(1, 100) as $i) {
+    	foreach(range(1, 500) as $i) {
     		Opportunity::create([
     			'status' => $faker->randomElement(['new', 'lost', 'won'])
     		]);

@@ -27,7 +27,7 @@ class DashboardController extends Controller
         $undeposited_fundsCount = Payment::where('status', 'undeposited')->count();
         $deposited_fundsCount = Payment::where('status', 'deposited')->count();
 
-        return view('/dashboard')
+        return view('admin.dashboard')
         ->with('contactCount', $contactCount)
         ->with('itemCount', $itemCount)
         ->with('invoiceCount', $invoiceCount)

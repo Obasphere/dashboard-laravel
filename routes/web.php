@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/dashboard', 'DashboardController@index');
+// Route::get('/dashboard', 'DashboardController@index');
 
 //Route::get('/api/dashboard', 'DashboardController@index');
 
@@ -21,5 +21,11 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::middleware('auth')->namespace('Admin')->prefix('admin')->as('admin.')->group(function(){
+    Route::get('/', 'DashboardController@index')->name('dashboard');
+    // Route::resource('/cities', 'CitiesController');
+    // Route::resource('/trips', 'TripsController');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');

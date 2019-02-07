@@ -1,8 +1,9 @@
 <?php
 
-namespace CittaDashboard\Http\Controllers;
+namespace CittaDashboard\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use CittaDashboard\Http\Controllers\Controller;
 use CittaDashboard\Contact;
 use CittaDashboard\Item;
 use CittaDashboard\Payment;

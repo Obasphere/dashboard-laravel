@@ -47,19 +47,7 @@
           <i class="fas fa-fw fa"></i>{{ Auth::user()->name }} </a>
         </li>
 
-        <li class="nav-item active">
-          <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Teams</span>
-          </a>
-        </li>
+        @yield('sidebar')
 
         <li class="nav-item active">
           <a class="nav-link bg-danger" target="_top" href="{{ route('logout') }}"

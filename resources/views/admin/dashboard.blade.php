@@ -1,7 +1,22 @@
 @extends('layouts.admin')
 
-@section('content')
+@section('sidebar')
+    <li class="nav-item active">
+      <a class="nav-link" href="{{ route('admin.dashboard') }}">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
 
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('admin.teams.index') }}">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Team-A</span>
+      </a>
+    </li>
+@endsection
+
+@section('content')
 <div class="container-fluid">
 
 <!-- Breadcrumbs-->
@@ -45,7 +60,7 @@
       <div class="card-body">
         <div class="card-body-icon">
         </div>
-        <div class="mr-5">All Invoice</div>
+        <div class="mr-5">All Invoices</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
         <span class="float-left">{{ $invoiceCount }}</span>

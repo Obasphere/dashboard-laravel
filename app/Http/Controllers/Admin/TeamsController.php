@@ -9,6 +9,7 @@ use CittaDashboard\Item;
 use CittaDashboard\Payment;
 use CittaDashboard\Invoice;
 use CittaDashboard\Opportunity;
+use CittaDashboard\Team;
 use DB;
 
 class TeamsController extends Controller
@@ -20,7 +21,7 @@ class TeamsController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.teams.index')->with('teams', Team::all());
     }
 
     /**
@@ -30,7 +31,18 @@ class TeamsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.teams.create')
+        ->with('contactCount', Contact::count())
+        ->with('itemCount', Item::count())
+        ->with('invoiceCount', Invoice::count())
+        ->with('unpaid_invoiceCount', Invoice::where('status', 'sent')->count())
+        ->with('paid_invoiceCount', Invoice::where('status', 'paid')->count())
+        ->with('opportunityCount', Opportunity::count())
+        ->with('lost_opportunityCount', Opportunity::where('status', 'lost')->count())
+        ->with('won_opportunityCount', Opportunity::where('status', 'won')->count())
+        ->with('new_opportunityCount', Opportunity::where('status', 'new')->count())
+        ->with('undeposited_fundsCount', Payment::where('status', 'undeposited')->count())
+        ->with('deposited_fundsCount', Payment::where('status', 'deposited')->count());
     }
 
     /**
@@ -39,9 +51,21 @@ class TeamsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Team $team)
     {
-        //
+        $team->all_contacts = $request->Contact::count();
+        $team->all_items = $request->Item::count();
+        $team->all_invoices = $request->Invoice::count();
+        $team->all_opportunities = $request->Opportunity::count();
+        $team->unpaid_invoices = $request->Invoice::where('status', 'sent')->count();
+        $team->paid_invoices = $request->Invoice::where('status', 'paid')->count();
+        $team->lost_opportunities = $request->Opportunity::where('status', 'lost')->count();
+        $team->won_opportunities = $request->Opportunity::where('status', 'won')->count();
+        $team->new_opportunities = $request->Opportunity::where('status', 'new')->count();
+        $team->undeposited_funds = $request->Payment::where('status', 'undeposited')->count();
+        $team->deposited_funds = $request->Payment::where('status', 'deposited')->count();
+        $team->save();
+        return redirect()->route('admin.teams.index');
     }
 
     /**
@@ -61,9 +85,21 @@ class TeamsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Team $team)
     {
-        //
+        $arr['team'] = $team;
+        return view('admin.teams.edit', $arr)
+        ->with('contactCount', Contact::count())
+        ->with('itemCount', Item::count())
+        ->with('invoiceCount', Invoice::count())
+        ->with('unpaid_invoiceCount', Invoice::where('status', 'sent')->count())
+        ->with('paid_invoiceCount', Invoice::where('status', 'paid')->count())
+        ->with('opportunityCount', Opportunity::count())
+        ->with('lost_opportunityCount', Opportunity::where('status', 'lost')->count())
+        ->with('won_opportunityCount', Opportunity::where('status', 'won')->count())
+        ->with('new_opportunityCount', Opportunity::where('status', 'new')->count())
+        ->with('undeposited_fundsCount', Payment::where('status', 'undeposited')->count())
+        ->with('deposited_fundsCount', Payment::where('status', 'deposited')->count());
     }
 
     /**
@@ -73,9 +109,21 @@ class TeamsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Team $team)
     {
-        //
+        $team->all_contacts = $request->Contact::count();
+        $team->all_items = $request->Item::count();
+        $team->all_invoices = $request->Invoice::count();
+        $team->all_opportunities = $request->Opportunity::count();
+        $team->unpaid_invoices = $request->Invoice::where('status', 'sent')->count();
+        $team->paid_invoices = $request->Invoice::where('status', 'paid')->count();
+        $team->lost_opportunities = $request->Opportunity::where('status', 'lost')->count();
+        $team->won_opportunities = $request->Opportunity::where('status', 'won')->count();
+        $team->new_opportunities = $request->Opportunity::where('status', 'new')->count();
+        $team->undeposited_funds = $request->Payment::where('status', 'undeposited')->count();
+        $team->deposited_funds = $request->Payment::where('status', 'deposited')->count();
+        $team->save();
+        return redirect()->route('admin.teams.index');
     }
 
     /**
@@ -86,6 +134,7 @@ class TeamsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Team::destroy($id);
+        return redirect()->route('admin.teams.index');
     }
 }

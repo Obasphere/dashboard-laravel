@@ -15,17 +15,17 @@ class CreateTeamsTable extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('all_contacts');
-            $table->integer('all_items');
-            $table->integer('all_invoices');
-            $table->integer('all_opportunities');
-            $table->integer('unpaid_invoices');
-            $table->integer('paid_invoices');
-            $table->integer('lost_opportunities');
-            $table->integer('won_opportunities');
-            $table->integer('new_opportunities');
-            $table->integer('undeposited_funds');
-            $table->integer('deposited_funds');
+            $table->string('all_contacts');
+            $table->string('all_items');
+            $table->string('all_invoices');
+            $table->string('all_opportunities');
+            $table->string('unpaid_invoices');
+            $table->string('paid_invoices');
+            $table->string('lost_opportunities');
+            $table->string('won_opportunities');
+            $table->string('new_opportunities');
+            $table->string('undeposited_funds');
+            $table->string('deposited_funds');
             $table->timestamps();
         });
     }

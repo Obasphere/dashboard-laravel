@@ -11,7 +11,7 @@
 |
 */
 
-// Route::get('/dashboard', 'DashboardController@index');
+Route::get('/dashboard', 'DashboardController@index');
 
 //Route::get('/api/dashboard', 'DashboardController@index');
 

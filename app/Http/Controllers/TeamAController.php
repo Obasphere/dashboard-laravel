@@ -9,6 +9,6 @@ class TeamAController extends Controller
 {
     public function index()
     {
-        return view('teamA.index')->with('teamA', Team::all());
+        return view('teama')->with('teams', Team::all());
     }
 }

@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/teamA', 'TeamAController@index');
+Route::get('/teama', 'TeamAController@index')->name('teama');
 
 //Route::get('/api/dashboard', 'DashboardController@index');
 

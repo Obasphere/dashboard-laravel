@@ -1,10 +1,24 @@
 @extends('layouts.client')
 
 @section('sidebar')
-    <li class="nav-item Active">
+    <li class="nav-item">
       <a class="nav-link" href="#">
+        <!-- <i class="fas fa-fw fa-table"></i>
+        <span></span> -->
+      </a>
+    </li>
+
+    <li class="nav-item active">
+      <a class="nav-link" href="{{ route('teama') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>Team-A</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Team-B</span>
       </a>
     </li>
 @endsection
@@ -20,6 +34,8 @@
   <li class="breadcrumb-item active">Overview</li>
 </ol>
 
+@foreach($teams as $team)
+
 <!-- Icon Cards-->
 <div class="row">
   <div class="col-xl-3 col-sm-6 mb-3">
@@ -30,7 +46,7 @@
         <div class="mr-5">All Contacts</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ all_contacts }}</span>
+        <span class="float-left">{{ $team->all_contacts }}</span>
       </a>
     </div>
   </div>
@@ -56,7 +72,7 @@
         <div class="mr-5">All Invoices</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ all_invoices }}</span>
+        <span class="float-left">{{ $team->all_invoices }}</span>
       </a>
     </div>
   </div>
@@ -167,5 +183,6 @@
 </div>
 </div>
 <!-- /.container-fluid -->
+@endforeach
 
 @endsection

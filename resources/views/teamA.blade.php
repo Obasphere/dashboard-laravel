@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.client')
 
 @section('sidebar')
     <li class="nav-item Active">
@@ -30,7 +30,7 @@
         <div class="mr-5">All Contacts</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ $contactCount }}</span>
+        <span class="float-left">{{ all_contacts }}</span>
       </a>
     </div>
   </div>
@@ -43,7 +43,7 @@
         <div class="mr-5">All Items</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ $itemCount }}</span>
+        <span class="float-left">{{ all_items }}</span>
       </a>
     </div>
   </div>
@@ -56,7 +56,7 @@
         <div class="mr-5">All Invoices</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ $invoiceCount }}</span>
+        <span class="float-left">{{ all_invoices }}</span>
       </a>
     </div>
   </div>
@@ -69,7 +69,7 @@
         <div class="mr-5">All Opportunities</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ $opportunityCount }}</span>
+        <span class="float-left">{{ all_opportunities }}</span>
       </a>
     </div>
   </div>
@@ -82,7 +82,7 @@
         <div class="mr-5">Unpaid Invoices</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ $unpaid_invoiceCount }}</span>
+        <span class="float-left">{{ unpaid_invoices }}</span>
       </a>
     </div>
   </div>
@@ -95,7 +95,7 @@
         <div class="mr-5">Paid Invoices</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ $paid_invoiceCount }}</span>
+        <span class="float-left">{{ paid_invoices }}</span>
       </a>
     </div>
   </div>
@@ -108,7 +108,7 @@
         <div class="mr-5">Lost Opportunities</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ $lost_opportunityCount }}</span>
+        <span class="float-left">{{ lost_opportunities }}</span>
       </a>
     </div>
   </div>
@@ -121,7 +121,7 @@
         <div class="mr-5">Won Opportunities</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ $won_opportunityCount }}</span>
+        <span class="float-left">{{ won_opportunities }}</span>
       </a>
     </div>
   </div>
@@ -134,7 +134,7 @@
         <div class="mr-5">New Opportunities</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ $new_opportunityCount }}</span>
+        <span class="float-left">{{ new_opportunities }}</span>
       </a>
     </div>
   </div>
@@ -147,7 +147,7 @@
         <div class="mr-5">Undeposited Funds</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ $undeposited_fundsCount }}</span>
+        <span class="float-left">{{ undeposited_funds }}</span>
       </a>
     </div>
   </div>
@@ -160,7 +160,7 @@
         <div class="mr-5">Deposited Payment</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ $deposited_fundsCount }}</span>
+        <span class="float-left">{{ deposited_funds }}</span>
       </a>
     </div>
   </div>

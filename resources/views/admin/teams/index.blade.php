@@ -42,6 +42,7 @@
                 <th>New Opportunities</th>
                 <th>Undeposited Funds</th>
                 <th>Deposited Payment</th>
+                <th>Action</th>
             </tr>
 
             @foreach($teams as $t)
@@ -58,8 +59,7 @@
                     <td>{{ $t->undeposited_funds }}</td>
                     <td>{{ $t->deposited_funds }}</td>
                     <td>
-                        <a href="{{ route('admin.teams.edit', $t->id) }}" class="btn btn-info">Edit</a>
-                        <a href="javascript:void(0)" onclick="$(this).parent().find('form').submit()" class="btn btn-danger">Delete</a>
+                        <a href="{{ route('admin.teams.edit', $t->id) }}" class="btn-sm btn-info">Edit</a>|<a href="javascript:void(0)" onclick="$(this).parent().find('form').submit()" class="btn-sm btn-danger">Delete</a>
                         <form action="{{ route('admin.teams.destroy', $t->id) }}" method="post">
                             @method('DELETE')
                             @csrf

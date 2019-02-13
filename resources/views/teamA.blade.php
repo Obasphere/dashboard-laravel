@@ -59,7 +59,7 @@
         <div class="mr-5">All Items</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ all_items }}</span>
+        <span class="float-left">{{ $team->all_items }}</span>
       </a>
     </div>
   </div>
@@ -85,7 +85,7 @@
         <div class="mr-5">All Opportunities</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ all_opportunities }}</span>
+        <span class="float-left">{{ $team->all_opportunities }}</span>
       </a>
     </div>
   </div>
@@ -98,7 +98,7 @@
         <div class="mr-5">Unpaid Invoices</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ unpaid_invoices }}</span>
+        <span class="float-left">{{ $team->unpaid_invoices }}</span>
       </a>
     </div>
   </div>
@@ -111,7 +111,7 @@
         <div class="mr-5">Paid Invoices</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ paid_invoices }}</span>
+        <span class="float-left">{{ $team->paid_invoices }}</span>
       </a>
     </div>
   </div>
@@ -124,7 +124,7 @@
         <div class="mr-5">Lost Opportunities</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ lost_opportunities }}</span>
+        <span class="float-left">{{ $team->lost_opportunities }}</span>
       </a>
     </div>
   </div>
@@ -137,7 +137,7 @@
         <div class="mr-5">Won Opportunities</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ won_opportunities }}</span>
+        <span class="float-left">{{ $team->won_opportunities }}</span>
       </a>
     </div>
   </div>
@@ -150,7 +150,7 @@
         <div class="mr-5">New Opportunities</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ new_opportunities }}</span>
+        <span class="float-left">{{ $team->new_opportunities }}</span>
       </a>
     </div>
   </div>
@@ -163,7 +163,7 @@
         <div class="mr-5">Undeposited Funds</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ undeposited_funds }}</span>
+        <span class="float-left">{{ $team->undeposited_funds }}</span>
       </a>
     </div>
   </div>
@@ -176,7 +176,7 @@
         <div class="mr-5">Deposited Payment</div>
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">{{ deposited_funds }}</span>
+        <span class="float-left">{{ $team->deposited_funds }}</span>
       </a>
     </div>
   </div>

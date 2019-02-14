@@ -12,6 +12,8 @@
 */
 
 Route::get('/teama', 'TeamAController@index')->name('teama');
+Route::get('/teamb', 'TeamBController@index')->name('teamb');
+Route::get('/teamc', 'TeamCController@index')->name('teamc');
 
 //Route::get('/api/dashboard', 'DashboardController@index');
 

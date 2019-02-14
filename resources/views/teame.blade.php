@@ -25,7 +25,7 @@
     </li>
     @endforeach
     @foreach($teamc as $team)
-    <li class="nav-item active">
+    <li class="nav-item">
       <a class="nav-link" href="{{ route('teamc') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>{{ $team->name }}</span>
@@ -41,7 +41,7 @@
     </li>
     @endforeach
     @foreach($teame as $team)
-    <li class="nav-item">
+    <li class="nav-item active">
       <a class="nav-link" href="{{ route('teame') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>{{ $team->name }}</span>

@@ -32,6 +32,30 @@
       </a>
     </li>
     @endforeach
+    @foreach($teamd as $team)
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('teamd') }}">
+        <i class="fas fa-fw fa-table"></i>
+        <span>{{ $team->name }}</span>
+      </a>
+    </li>
+    @endforeach
+    @foreach($teame as $team)
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('teame') }}">
+        <i class="fas fa-fw fa-table"></i>
+        <span>{{ $team->name }}</span>
+      </a>
+    </li>
+    @endforeach
+    @foreach($teamf as $team)
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('teamf') }}">
+        <i class="fas fa-fw fa-table"></i>
+        <span>{{ $team->name }}</span>
+      </a>
+    </li>
+    @endforeach
 
 @endsection
 

@@ -221,6 +221,3 @@
 @endforeach
 
 @endsection
-<!-- @if($team->all_contacts == 'N/A' && $team->all_items == 'N/A' && $team->all_invoices == 'N/A' && $team->all_opportunities == 'N/A' && $team->unpaid_invoices == 'N/A' && $team->paid_invoices == 'N/A' && $team->lost_opportunities == 'N/A' && $team->won_opportunities == 'N/A' && $team->new_opportunities == 'N/A' && $team->undeposited_funds == 'N/A' && $team->deposited_funds == 'N/A')
-                hidden
-                @endif -->

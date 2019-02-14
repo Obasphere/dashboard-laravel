@@ -12,7 +12,7 @@
     <li class="nav-item active">
       <a class="nav-link" href="{{ route('admin.teams.index') }}">
         <i class="fas fa-fw fa-table"></i>
-        <span>Team-A</span>
+        <span>Teams</span>
       </a>
     </li>
 @endsection
@@ -20,14 +20,14 @@
 @section('content')
     <!-- Breadcrumb-->
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><h1>Team-A</h1></li>
+      <li class="breadcrumb-item"><h1>Teams</h1></li>
     </ol>
 
         <!-- content header-->
     <section class="content">
      <div class="container-fluid">
         <p>
-            <a href="{{ route('admin.teams.create') }}" class="btn btn-primary">Add New Dashboard for Team-A</a>
+            <a href="{{ route('admin.teams.create') }}" class="btn btn-primary">Add a New Team</a>
         </p>
         <table class="table table-bordered table-striped">
             <tr>
@@ -59,7 +59,8 @@
                     <td>{{ $t->undeposited_funds }}</td>
                     <td>{{ $t->deposited_funds }}</td>
                     <td>
-                        <a href="{{ route('admin.teams.edit', $t->id) }}" class="btn-sm btn-info">Edit</a>|<a href="javascript:void(0)" onclick="$(this).parent().find('form').submit()" class="btn-sm btn-danger">Delete</a>
+                        <a href="{{ route('admin.teams.edit', $t->id) }}" class="btn-sm btn-info">Edit</a>
+                        <!-- |<a href="javascript:void(0)" onclick="$(this).parent().find('form').submit()" class="btn-sm btn-danger">Delete</a> -->
                         <form action="{{ route('admin.teams.destroy', $t->id) }}" method="post">
                             @method('DELETE')
                             @csrf

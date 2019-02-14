@@ -12,7 +12,7 @@
     <li class="nav-item active">
       <a class="nav-link" href="{{ route('admin.teams.index') }}">
         <i class="fas fa-fw fa-table"></i>
-        <span>Team-A</span>
+        <span>Teams</span>
       </a>
     </li>
 @endsection
@@ -21,7 +21,7 @@
 
     <!-- Breadcrumb-->
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><h1>Edit Dashboard for Team-A</h1></li>
+      <li class="breadcrumb-item"><h1>Edit Team</h1></li>
     </ol>
 
         <!-- content header-->

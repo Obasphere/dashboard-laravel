@@ -11,7 +11,7 @@
     <li class="nav-item">
       <a class="nav-link" href="{{ route('admin.teams.index') }}">
         <i class="fas fa-fw fa-table"></i>
-        <span>Team-A</span>
+        <span>Teams</span>
       </a>
     </li>
 @endsection

@@ -31,6 +31,7 @@
         </p>
         <table class="table table-bordered table-striped">
             <tr>
+                <th>Teams</th>
                 <th>All Contacts</th>
                 <th>All Items</th>
                 <th>All Invoices</th>
@@ -47,6 +48,7 @@
 
             @foreach($teams as $t)
                 <tr>
+                    <td>{{ $t->name }}</td>
                     <td>{{ $t->all_contacts }}</td>
                     <td>{{ $t->all_items }}</td>
                     <td>{{ $t->all_invoices }}</td>

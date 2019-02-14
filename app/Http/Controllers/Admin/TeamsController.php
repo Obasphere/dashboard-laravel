@@ -65,6 +65,7 @@ class TeamsController extends Controller
      */
     public function store(Request $request, Team $team)
     {
+        $team->name = $request->name;
         $team->all_contacts = $request->all_contacts;
         $team->all_items = $request->all_items;
         $team->all_invoices = $request->all_invoices;
@@ -136,6 +137,7 @@ class TeamsController extends Controller
      */
     public function update(Request $request, Team $team)
     {
+        $team->name = $request->name;
         $team->all_contacts = $request->all_contacts;
         $team->all_items = $request->all_items;
         $team->all_invoices = $request->all_invoices;

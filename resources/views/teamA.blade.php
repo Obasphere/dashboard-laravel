@@ -8,32 +8,31 @@
       </a>
     </li>
 
-    @foreach($teams as $team)
-
-    <li class="nav-item active @if($team->all_contacts == 'N/A' && $team->all_items == 'N/A' && $team->all_invoices == 'N/A' && $team->all_opportunities == 'N/A' && $team->unpaid_invoices == 'N/A' && $team->paid_invoices == 'N/A' && $team->lost_opportunities == 'N/A' && $team->won_opportunities == 'N/A' && $team->new_opportunities == 'N/A' && $team->undeposited_funds == 'N/A' && $team->deposited_funds == 'N/A')
-                hidden
-                @endif">
+    @foreach($teama as $team)
+    <li class="nav-item active">
       <a class="nav-link" href="{{ route('teama') }}">
         <i class="fas fa-fw fa-table"></i>
-        <span>Team-A</span>
+        <span>{{ $team->name }}</span>
       </a>
     </li>
-
+    @endforeach
+    @foreach($teamb as $team)
     <li class="nav-item">
       <a class="nav-link" href="{{ route('teamb') }}">
         <i class="fas fa-fw fa-table"></i>
-        <span>Team-B</span>
+        <span>{{ $team->name }}</span>
       </a>
     </li>
-
+    @endforeach
+    @foreach($teamc as $team)
     <li class="nav-item">
       <a class="nav-link" href="{{ route('teamc') }}">
         <i class="fas fa-fw fa-table"></i>
-        <span>Team-C</span>
+        <span>{{ $team->name }}</span>
       </a>
     </li>
-
     @endforeach
+
 @endsection
 
 @section('content')
@@ -222,3 +221,6 @@
 @endforeach
 
 @endsection
+<!-- @if($team->all_contacts == 'N/A' && $team->all_items == 'N/A' && $team->all_invoices == 'N/A' && $team->all_opportunities == 'N/A' && $team->unpaid_invoices == 'N/A' && $team->paid_invoices == 'N/A' && $team->lost_opportunities == 'N/A' && $team->won_opportunities == 'N/A' && $team->new_opportunities == 'N/A' && $team->undeposited_funds == 'N/A' && $team->deposited_funds == 'N/A')
+                hidden
+                @endif -->

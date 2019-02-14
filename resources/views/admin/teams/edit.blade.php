@@ -33,7 +33,9 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-3">
-                    <h6>All Contacts</h6>
+                        <h6>Team Name</h6>
+                            <input type="text" class="form-control" name="name" placeholder="Type Team Name" value="{{ $team->name }}"><br>
+                        <h6>All Contacts</h6>
                         <select name="all_contacts" class="form-control">
                             <option value="N/A">N/A</option>
                             <option value="{{ $contactCount }}">{{ $contactCount }}</option>

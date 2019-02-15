@@ -18,9 +18,6 @@ Route::get('/teamd', 'TeamDController@index')->name('teamd');
 Route::get('/teame', 'TeamEController@index')->name('teame');
 Route::get('/teamf', 'TeamFController@index')->name('teamf');
 
-//Route::get('/api/dashboard', 'DashboardController@index');
-
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -30,7 +27,6 @@ Auth::routes();
 Route::middleware('auth')->namespace('Admin')->prefix('admin')->as('admin.')->group(function(){
     Route::get('/', 'DashboardController@index')->name('dashboard');
     Route::resource('/teams', 'TeamsController');
-    // Route::resource('/trips', 'TripsController');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
